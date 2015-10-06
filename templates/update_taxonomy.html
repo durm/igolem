@@ -1,0 +1,8 @@
+<form method="post" action=""  enctype="multipart/form-data">
+    <fieldset>
+        {% csrf_token %}
+        <legend>Update taxonomy</legend>
+        <input type="file" name="file"/>
+        <input type="submit"/>
+    </fieldset>
+</form>
