@@ -1,2 +1,4 @@
 db.sqlite*
 titan.kdev4*
+*__pycache__*
+*.pyc
