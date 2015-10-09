@@ -22,6 +22,23 @@ class Vendor(Proto):
 class Category(Proto):
     parent = models.ForeignKey('self', null=True, blank=True)
 
+    @staticmethod
+    def get_roots():
+        return Category.objects.filter(parent=None)
+
+    @staticmethod
+    def store_from_taxonomy(tax, **kwargs):
+        for node in tax.getchildren():
+            category = Category(name=node.get("name"), **kwargs)
+            category.save()
+            kwargs["parent"] = category
+            Category.store_from_taxonomy(node, **kwargs)
+
+    @staticmethod
+    def delete_all():
+        categories = Category.objects.all()
+        categories.delete()
+
 class Product(Proto):
     
     vendor = models.ForeignKey(Vendor, related_name="+", null=False, blank=False)

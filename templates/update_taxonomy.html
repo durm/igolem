@@ -1,3 +1,5 @@
+
+<div>
 <form method="post" action=""  enctype="multipart/form-data">
     <fieldset>
         {% csrf_token %}
@@ -6,3 +8,11 @@
         <input type="submit"/>
     </fieldset>
 </form>
+
+{{ roots }}
+<ul>
+{% for root in roots %}
+    <li>{{ root.name }}</li>
+{% endfor %}
+</ul>
+</div>

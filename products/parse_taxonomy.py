@@ -6,15 +6,16 @@ import os
 def get_indentation_level(row, level_indent=4):
     row = row.replace("\t", " "*level_indent)
     i = 0
-    while row[i] == " " :
+    while row[i] == " ":
         i += 1
     return int(i / level_indent)
     
 def validate(rows):
     current_level = 0
-    for row in rows :
+    for row in rows:
         level = get_indentation_level(row)
-        if level - current_level > 1 : return False
+        if level - current_level > 1: 
+            return False
         current_level = level
     return True
     
@@ -22,12 +23,12 @@ def get_path(elem):
     return "/".join([e.get("name", "") for e in elem.xpath("./ancestor-or-self::*")])
     
 def parse_taxonomy(rows):
-    rows = list(rows)
+    rows = list(map(lambda x: x.decode("utf-8"), rows))
     assert validate(rows), "Wrong structure"
     tax = etree.Element("tax")
     current_root = None
     current_level = 0
-    for k, row in enumerate(rows) :
+    for k, row in enumerate(rows):
         level = get_indentation_level(row)
         elem = etree.Element("node")
         name = row.strip().lower().capitalize()
