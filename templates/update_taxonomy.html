@@ -1,5 +1,10 @@
+{% extends "base.html" %}
 
-<div>
+{% block title %}
+    Update taxonomy
+{% endblock %}
+
+{% block content %}
 <form method="post" action=""  enctype="multipart/form-data">
     <fieldset>
         {% csrf_token %}
@@ -9,10 +14,9 @@
     </fieldset>
 </form>
 
-{{ roots }}
 <ul>
 {% for root in roots %}
     <li>{{ root.name }}</li>
 {% endfor %}
 </ul>
-</div>
+{% endblock %}

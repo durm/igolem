@@ -22,6 +22,9 @@ class Vendor(Proto):
 class Category(Proto):
     parent = models.ForeignKey('self', null=True, blank=True)
 
+    def getchildren(self):
+        return Category.objects.filter(parent=self)
+
     @staticmethod
     def get_roots():
         return Category.objects.filter(parent=None)
@@ -31,8 +34,9 @@ class Category(Proto):
         for node in tax.getchildren():
             category = Category(name=node.get("name"), **kwargs)
             category.save()
-            kwargs["parent"] = category
-            Category.store_from_taxonomy(node, **kwargs)
+            kw = kwargs.copy()
+            kw["parent"] = category
+            Category.store_from_taxonomy(node, **kw)
 
     @staticmethod
     def delete_all():
