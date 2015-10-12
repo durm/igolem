@@ -13,75 +13,7 @@
             DVD РЕСИВЕРЫ 2DIN
             MP3-РЕСИВЕРЫ 2DIN
         ШТАТНЫЕ ГОЛОВНЫЕ УСТРОЙСТВА
-            Audi
-            BMW
-            Chevrolet
-            Chrysler
-            Citroen
-            FIAT
-            Ford
-            GEELY
-            Great wall
-            Honda
-            Hyundai
-            KIA
-            LADA
-            Land Rover
-            Lexus
-            Mazda
-            Mercedes
-            Mitsubishi
-            Nissan
-            Opel
-            Peugeot
-            Porsche
-            Renault
-            Skoda
-            Ssang Yong
-            Subaru
-            Suzuki
-            Toyota
-            VW
     ПЕРЕХОДНЫЕ РАМКИ ДЛЯ ИНОМАРОК
-        Acura
-        Alfa Romeo
-        Audi
-        BMW
-        Brilliance
-        Chery
-        Chevrolet
-        Chrysler
-        Citroen
-        Fiat
-        Ford
-        Geely
-        Great Wall
-        Honda
-        Hyundai
-        Jaguar
-        Kia
-        LADA
-        Land Rover
-        Lexus
-        Lifan
-        Mazda
-        Mercedes
-        Mitsubishi
-        Nissan
-        Opel
-        Peugeot
-        Porsche
-        Renault
-        Rover
-        Skoda
-        Smart
-        Ssang Yong
-        Subaru
-        Suzuki
-        Toyota
-        VW
-        Volvo
-        Универсальные рамки и карманы
     USB/IPOD/BT-ИНТЕРФЕЙСЫ ДЛЯ ШТАТНЫХ МАГНИТОЛ
     РАДИОАНТЕННЫ. ПУЛЬТЫ ДУ. АКСЕССУАРЫ И АДАПТЕРЫ ШТАТНЫХ АНТЕНН
         РАДИОАНТЕННЫ
