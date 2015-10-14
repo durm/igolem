@@ -1,4 +1,4 @@
-from django.shortcuts import render, render_to_response, redirect
+from django.shortcuts import render, render_to_response, redirect, get_object_or_404
 from django.template import RequestContext
 from django.template.context_processors import csrf
 from products.models import Category, Product
@@ -39,4 +39,9 @@ def update_taxonomy(request):
 def update_products(request):
     return update_from_file(request, "Обновить продукты", products_processing, "update_products")
 
-
+def product_page(request, num):
+    product = get_object_or_404(Product, int(num))
+    c = {
+        "product": product
+    }
+    return render_to_response("product.html", c, context_instance=RequestContext(request))

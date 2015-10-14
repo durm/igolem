@@ -78,6 +78,9 @@ class Product(Proto, PageProto):
     is_new = models.BooleanField()
     is_special_price = models.BooleanField()
 
+    def get_name(self):
+        return "{0} {1}".format(self.vendor.name, self.name)
+
     @staticmethod
     def mark_all_as_unavailable():
         products = Product.objects.all()
