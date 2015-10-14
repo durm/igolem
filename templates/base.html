@@ -1,7 +1,12 @@
 <html>
     <head>
-        <meta charset="utf-8"/>
         <title>{% block title %}{% endblock %}</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+ 
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/kube/3.0.2/css/kube.min.css" />
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js"></script>
+        {% block libs %}{% endblock %}
     </head>
     <body>
         {% block content %}{% endblock %}

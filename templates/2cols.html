@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+        <div class="units-row">
+            <div class="unit-30" {% if overflowx %}style="overflow-x: auto; white-space: nowrap;"{% endif %}>
+                {% block left %}{% endblock %}
+            </div>
+            <div class="unit-70">
+                {% block right %}{% endblock %}
+            </div>
+        </div>
+{% endblock %}

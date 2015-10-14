@@ -1,9 +1,21 @@
-{% extends "base.html" %}
+{% extends "2cols.html" %}
 
 {% block title %}
     {{ product.get_name }}
 {% endblock %}
 
-{% block content %}
-1
+{% block left %}
+
+{% endblock %}
+
+{% block right %}
+    <h3>{{ product.get_name }}</h3>
+    {% if product.desc %}
+        <p>{{ product.desc }}</p>
+    {% endif %}
+    {% if content %}
+        <div class="content">
+            {{ product.content }}
+        </div>
+    {% endif %}
 {% endblock %}

@@ -45,3 +45,10 @@ def product_page(request, num):
         "product": product
     }
     return render_to_response("product.html", c, context_instance=RequestContext(request))
+
+def category_page(request, num):
+    category = get_object_or_404(Category, pk=num)
+    c = {
+        "category": category
+    }
+    return render_to_response("category.html", c, context_instance=RequestContext(request))
