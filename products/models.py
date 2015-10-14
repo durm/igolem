@@ -1,7 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
-
-from lxml import etree
+from products.utils import *
 
 class Proto(models.Model):
 
@@ -108,6 +107,17 @@ class Product(Proto, PageProto):
             except Exception as e:
                 errors.append("{1} (Error: {0})".format(str(e), prd.get("raw")))
         return errors
+
+    def update_content(self):
+        if self.external_link is not None:
+            self.content = get_external_desc(self.external_link)
+
+    def update_image(self, f=None):
+        if f is None :
+            if self.external_link is not None:
+                pass
+
+
 
 class Page(Proto, PageProto):
     pass
