@@ -40,7 +40,7 @@ def update_products(request):
     return update_from_file(request, "Обновить продукты", products_processing, "update_products")
 
 def product_page(request, num):
-    product = get_object_or_404(Product, int(num))
+    product = get_object_or_404(Product, pk=num)
     c = {
         "product": product
     }
