@@ -80,7 +80,8 @@ class Product(Proto, PageProto):
 
     @staticmethod
     def mark_all_as_unavailable():
-        pass
+        products = Product.objects.all()
+        products.update(is_available_for_trade=False, is_available_for_retail=False)
 
     @staticmethod
     def store_from_price(file, **kwargs):
@@ -107,5 +108,3 @@ class Product(Proto, PageProto):
 
 class Page(Proto, PageProto):
     pass
-
-
